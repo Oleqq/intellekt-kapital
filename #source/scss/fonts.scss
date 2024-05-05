@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald-Regular.eot');
+    src: local('Oswald Regular'), local('Oswald-Regular'),
+        url('../fonts/Oswald-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Oswald-Regular.woff2') format('woff2'),
+        url('../fonts/Oswald-Regular.woff') format('woff'),
+        url('../fonts/Oswald-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald-Medium.eot');
+    src: local('Oswald Medium'), local('Oswald-Medium'),
+        url('../fonts/Oswald-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Oswald-Medium.woff2') format('woff2'),
+        url('../fonts/Oswald-Medium.woff') format('woff'),
+        url('../fonts/Oswald-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald-SemiBold.eot');
+    src: local('Oswald SemiBold'), local('Oswald-SemiBold'),
+        url('../fonts/Oswald-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Oswald-SemiBold.woff2') format('woff2'),
+        url('../fonts/Oswald-SemiBold.woff') format('woff'),
+        url('../fonts/Oswald-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald-Bold.eot');
+    src: local('Oswald Bold'), local('Oswald-Bold'),
+        url('../fonts/Oswald-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Oswald-Bold.woff2') format('woff2'),
+        url('../fonts/Oswald-Bold.woff') format('woff'),
+        url('../fonts/Oswald-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Encode Sans';
+    src: url('../fonts/EncodeSans-Regular.eot');
+    src: local('Encode Sans Regular'), local('EncodeSans-Regular'),
+        url('../fonts/EncodeSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/EncodeSans-Regular.woff2') format('woff2'),
+        url('../fonts/EncodeSans-Regular.woff') format('woff'),
+        url('../fonts/EncodeSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Encode Sans';
+    src: url('../fonts/EncodeSans-Medium.eot');
+    src: local('Encode Sans Medium'), local('EncodeSans-Medium'),
+        url('../fonts/EncodeSans-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/EncodeSans-Medium.woff2') format('woff2'),
+        url('../fonts/EncodeSans-Medium.woff') format('woff'),
+        url('../fonts/EncodeSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Encode Sans';
+    src: url('../fonts/EncodeSans-SemiBold.eot');
+    src: local('Encode Sans SemiBold'), local('EncodeSans-SemiBold'),
+        url('../fonts/EncodeSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/EncodeSans-SemiBold.woff2') format('woff2'),
+        url('../fonts/EncodeSans-SemiBold.woff') format('woff'),
+        url('../fonts/EncodeSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Encode Sans';
+    src: url('../fonts/EncodeSans-Bold.eot');
+    src: local('Encode Sans Bold'), local('EncodeSans-Bold'),
+        url('../fonts/EncodeSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/EncodeSans-Bold.woff2') format('woff2'),
+        url('../fonts/EncodeSans-Bold.woff') format('woff'),
+        url('../fonts/EncodeSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
