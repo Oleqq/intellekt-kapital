@@ -416,6 +416,26 @@ h4 {
   line-height: 150%;
   color: var(--white);
 }
+@media (max-width: 991px) {
+  h4 {
+    font-size: 39px;
+  }
+}
+@media (max-width: 767px) {
+  h4 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 567px) {
+  h4 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 467px) {
+  h4 {
+    font-size: 26px;
+  }
+}
 
 p {
   font-family: "NotoSans-Medium";
@@ -423,6 +443,26 @@ p {
   font-size: 20px;
   line-height: 150%;
   color: var(--white);
+}
+@media (max-width: 991px) {
+  p {
+    font-size: 19px;
+  }
+}
+@media (max-width: 767px) {
+  p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 567px) {
+  p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 467px) {
+  p {
+    font-size: 14px;
+  }
 }
 
 :root {
@@ -920,7 +960,6 @@ a {
     display: flex !important;
     width: 100vw !important;
     height: 100vh !important;
-    padding: 120px 0 120px 0;
     transform: translate3d(0px, 0%, 0px) !important;
     overflow-y: auto; /* Замените на auto для более надежной работы на мобильных устройствах */
   }
@@ -1337,6 +1376,20 @@ a {
   bottom: 0;
   right: 10%;
 }
+@media (max-width: 1440px) {
+  .about__decoration .decoration-block-2 {
+    right: 0;
+    top: 205px;
+  }
+}
+@media (max-width: 567px) {
+  .about__decoration .decoration-block-2 {
+    background: #ff004c;
+    width: 48px;
+    height: 48px;
+    top: 266px;
+  }
+}
 .about-text {
   padding: 50px;
   background: var(--accent-dark);
@@ -1364,6 +1417,19 @@ a {
     max-width: 100vw;
     left: 0;
     top: 33%;
+    padding: 40px;
+    gap: 26px;
+  }
+}
+@media (max-width: 767px) {
+  .about-text {
+    padding: 35px;
+    gap: 20px;
+  }
+}
+@media (max-width: 567px) {
+  .about-text {
+    padding: 30px;
   }
 }
 .about-text h4 {

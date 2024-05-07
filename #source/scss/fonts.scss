@@ -171,6 +171,19 @@ h4 {
     font-size: 40px;
     line-height: 150%;
     color: var(--white);
+
+    @media (max-width:991px) {
+        font-size: 39px;
+    }
+    @media (max-width:767px) {
+        font-size: 36px;
+    }
+    @media (max-width:567px) {
+        font-size: 32px;
+    }
+    @media (max-width:467px) {
+        font-size: 26px;
+    }
 }
 
 
@@ -180,4 +193,17 @@ p {
     font-size: 20px;
     line-height: 150%;
     color: var(--white);
+
+    @media (max-width:991px) {
+        font-size: 19px;
+    }
+    @media (max-width:767px) {
+        font-size: 18px;
+    }
+    @media (max-width:567px) {
+        font-size: 16px;
+    }
+    @media (max-width:467px) {
+        font-size: 14px;
+    }
 }
