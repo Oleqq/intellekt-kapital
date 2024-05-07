@@ -50,37 +50,44 @@
 	<script src="./js/jquery-3.6.0.min.js"></script>
 
 	<script src="./js/jquery.pagepiling.js"></script>
-	<script type="text/javascript" src="./js/jquery.pagepiling.min.js"></script>
+	<!-- <script type="text/javascript" src="./js/jquery.pagepiling.min.js"></script> -->
+
+	
+	
+	
 	<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-    if (window.innerWidth > 991) {
-        $('#pagepiling').pagepiling({
-            menu: '#menu',
-            anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
-            sectionsColor: ['#145758', '#145758', '#2C3E50', '#51bec4'],
-            navigation: {
-                'position': 'right',
-                'tooltips': ['Главная', 'О КОМПАНИИ', 'ПРЕИМУЩЕСТВА', 'ПРОЕКТЫ', 'КОНТАКТЫ']
-            },
-            scrollingSpeed: 0, // Отключаем прокрутку между слайдами
-            afterRender: function(){
-                // Воспроизводим видео
-                $('video').get(0).play();
-            }
-        });
-    }
-    // Кнопка открытия меню
-    $('.fullscreen-menu__button').click(function() {
-        $('#fullscreen-menu-section').toggleClass('open');
-    });
-
-    // Кнопка закрытия меню
-    $('.fullscreen-menu__button-close').click(function() {
-        $('#fullscreen-menu-section').removeClass('open');
-    });
-});
-
-    </script>
+		document.addEventListener('DOMContentLoaded', function() {
+			// Проверяем ширину экрана
+			if (window.innerWidth > 991) {
+				// Если ширина экрана больше 991px, включаем pagepiling
+				$('#pagepiling').pagepiling({
+					menu: '#menu',
+					anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
+					sectionsColor: ['#145758', '#145758', '#2C3E50', '#51bec4'],
+					navigation: {
+						'position': 'right',
+						'tooltips': ['Главная', 'О КОМПАНИИ', 'ПРЕИМУЩЕСТВА', 'ПРОЕКТЫ', 'КОНТАКТЫ']
+					},
+					scrollingSpeed: 0, // Отключаем прокрутку между слайдами
+					afterRender: function(){
+						// Воспроизводим видео
+						$('video').get(0).play();
+					}
+				});
+			}
+			
+			// Кнопка открытия меню
+			$('.fullscreen-menu__button').click(function() {
+				$('#fullscreen-menu-section').toggleClass('open');
+			});
+	
+			// Кнопка закрытия меню
+			$('.fullscreen-menu__button-close').click(function() {
+				$('#fullscreen-menu-section').removeClass('open');
+			});
+		});
+	</script>
+	
 
 	<link rel="stylesheet" href="./css/swiper-bundle.min.css">
 	

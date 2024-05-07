@@ -921,8 +921,14 @@ a {
     width: 100vw !important;
     height: 100vh !important;
     padding: 120px 0 120px 0;
-    transform: none !important;
-    overflow-y: auto; /* Добавляем прокрутку по вертикали */
+    transform: translate3d(0px, 0%, 0px) !important;
+    overflow-y: auto; /* Замените на auto для более надежной работы на мобильных устройствах */
+  }
+}
+
+@media (max-width: 991px) {
+  html {
+    overflow-y: auto;
   }
 }
 
@@ -930,6 +936,7 @@ a {
   html, body {
     height: auto;
     scroll-behavior: smooth;
+    touch-action: auto;
   }
 }
 
