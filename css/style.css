@@ -922,6 +922,7 @@ a {
     height: 100vh !important;
     padding: 120px 0 120px 0;
     transform: none !important;
+    overflow-y: auto; /* Добавляем прокрутку по вертикали */
   }
 }
 
@@ -929,7 +930,6 @@ a {
   html, body {
     height: auto;
     scroll-behavior: smooth;
-    overflow-y: scroll;
   }
 }
 

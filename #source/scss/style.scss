@@ -35,25 +35,24 @@
 
 // freemode для pagePiling.js (костыли) <--- START --->
 section {
-	@media (max-width:991px) {
-		position: unset !important;
-		display: flex !important;
-		width: 100vw !important;
-		height: 100vh !important;
-
-		padding: 120px 0 120px 0;
-
-		transform: none !important;
-
-	}
+    @media (max-width:991px) {
+        position: unset !important;
+        display: flex !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        padding: 120px 0 120px 0;
+        transform: none !important;
+        overflow-y: auto; /* Добавляем прокрутку по вертикали */
+    }
 }
+
 html, body {
-	@media (max-width:991px) {
-		height: auto;
-		scroll-behavior: smooth;
-		overflow-y: scroll;
-	}
+    @media (max-width:991px) {
+        height: auto;
+        scroll-behavior: smooth;
+    }
 }
+
 // freemode для pagePiling.js (костыли) <--- END --->
 
 
