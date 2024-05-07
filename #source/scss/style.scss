@@ -48,9 +48,11 @@ section {
 	}
 }
 html, body {
-	height: auto;
-    scroll-behavior: smooth;
-    overflow-y: auto;
+	@media (max-width:991px) {
+		height: auto;
+		scroll-behavior: smooth;
+		overflow-y: scroll;
+	}
 }
 // freemode для pagePiling.js (костыли) <--- END --->
 

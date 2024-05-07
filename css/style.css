@@ -925,10 +925,12 @@ a {
   }
 }
 
-html, body {
-  height: auto;
-  scroll-behavior: smooth;
-  overflow-y: auto;
+@media (max-width: 991px) {
+  html, body {
+    height: auto;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+  }
 }
 
 .pp-viewing-page1 .menu-swiper {
