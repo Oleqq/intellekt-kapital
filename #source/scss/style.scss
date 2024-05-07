@@ -33,36 +33,36 @@
 
 
 
-/* Костыли для freemode в pagePiling.js */
-/* START */
-@media (max-width:991px) {
-    section {
+// freemode для pagePiling.js (костыли) <--- START --->
+section {
+    @media (max-width:991px) {
         position: unset !important;
         display: flex !important;
         width: 100vw !important;
         height: 100vh !important;
         padding: 120px 0 120px 0;
         transform: translate3d(0px, 0%, 0px) !important;
-        
+        overflow-y: auto; /* Замените на auto для более надежной работы на мобильных устройствах */
     }
+}
 
-    html {
-        overflow-y: auto;
-    }
+html {
+	@media (max-width:991px) {
+		overflow-y: auto;
+	}
+}
 
-    html, body {
+
+
+html, body {
+    @media (max-width:991px) {
         height: auto;
         scroll-behavior: smooth;
         touch-action: auto;
     }
-
-	#pagepiling {
-		overflow-y: auto !important;
-		overflow: auto !important;
-    	touch-action: auto !important;
-	}
 }
-/* END */
+
+// freemode для pagePiling.js (костыли) <--- END --->
 
 
 

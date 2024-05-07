@@ -914,8 +914,6 @@ a {
   color: var(--white);
 }
 
-/* Костыли для freemode в pagePiling.js */
-/* START */
 @media (max-width: 991px) {
   section {
     position: unset !important;
@@ -924,22 +922,24 @@ a {
     height: 100vh !important;
     padding: 120px 0 120px 0;
     transform: translate3d(0px, 0%, 0px) !important;
+    overflow-y: auto; /* Замените на auto для более надежной работы на мобильных устройствах */
   }
+}
+
+@media (max-width: 991px) {
   html {
     overflow-y: auto;
   }
+}
+
+@media (max-width: 991px) {
   html, body {
     height: auto;
     scroll-behavior: smooth;
     touch-action: auto;
   }
-  #pagepiling {
-    overflow-y: auto !important;
-    overflow: auto !important;
-    touch-action: auto !important;
-  }
 }
-/* END */
+
 .pp-viewing-page1 .menu-swiper {
   opacity: 0;
   transition: 0.7s ease;
