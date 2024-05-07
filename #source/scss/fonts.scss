@@ -143,3 +143,16 @@
     font-weight: 500;
     font-style: normal;
 }
+
+
+h1 { 
+    font-family:'NotoSerifDisplay_Condensed-Regular';
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 100%;
+    color: var(--white);
+
+    b {
+        font-family: 'NotoSerifDisplay_Condensed-Black';
+    }
+}
