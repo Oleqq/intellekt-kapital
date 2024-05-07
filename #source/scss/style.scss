@@ -26,6 +26,41 @@
 // 	overflow-x: hidden;
 // }
 
+
+
+
+
+
+
+
+// freemode для pagePiling.js (костыли) <--- START --->
+section {
+	@media (max-width:991px) {
+		position: unset !important;
+		display: flex !important;
+		width: 100vw !important;
+		height: 100vh !important;
+
+		padding: 120px 0 120px 0;
+
+		transform: none !important;
+
+	}
+}
+html, body {
+	height: auto;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+}
+// freemode для pagePiling.js (костыли) <--- END --->
+
+
+
+
+
+
+
+
 .pp-viewing-page {
 	&1 {
 		.menu-swiper {
@@ -410,7 +445,7 @@
 
 	&__decoration {
 		// position: absolute;
-		height: 100%;
+		// height: 100%;
 		width: 100%;
 		top: 0;
 

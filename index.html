@@ -49,37 +49,37 @@
 
 	<script src="./js/jquery-3.6.0.min.js"></script>
 
+	<script src="./js/jquery.pagepiling.js"></script>
 	<script type="text/javascript" src="./js/jquery.pagepiling.min.js"></script>
 	<script type="text/javascript">
-	document.addEventListener('DOMContentLoaded', function() {
-		$('#pagepiling').pagepiling({
-			menu: '#menu',
-			anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
-			sectionsColor: ['#bfda00', '#145758', '#2C3E50', '#51bec4'],
-			navigation: {
-				'position': 'right',
-				'tooltips': ['Главная', 'О КОМПАНИИ', 'ПРЕИМУЩЕСТВА', 'ПРОЕКТЫ', 'КОНТАКТЫ']
-			},
-			scrollingSpeed: 0, // Отключаем прокрутку между слайдами
-			afterRender: function(){
-				//playing the video
-				$('video').get(0).play();
-			}
-		});
-
-		// Кнопка открытия меню
-		$('.fullscreen-menu__button').click(function() {
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.innerWidth > 991) {
+        $('#pagepiling').pagepiling({
+            menu: '#menu',
+            anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
+            sectionsColor: ['#bfda00', '#145758', '#2C3E50', '#51bec4'],
+            navigation: {
+                'position': 'right',
+                'tooltips': ['Главная', 'О КОМПАНИИ', 'ПРЕИМУЩЕСТВА', 'ПРОЕКТЫ', 'КОНТАКТЫ']
+            },
+            scrollingSpeed: 0, // Отключаем прокрутку между слайдами
+            afterRender: function(){
+                // Воспроизводим видео
+                $('video').get(0).play();
+            }
+        });
+    }
+    // Кнопка открытия меню
+    $('.fullscreen-menu__button').click(function() {
         $('#fullscreen-menu-section').toggleClass('open');
-    	});
+    });
 
-		// Кнопка закрытия меню
-		$('.fullscreen-menu__button-close').click(function() {
-			$('#fullscreen-menu-section').removeClass('open');
-		});
+    // Кнопка закрытия меню
+    $('.fullscreen-menu__button-close').click(function() {
+        $('#fullscreen-menu-section').removeClass('open');
+    });
+});
 
-		
-
-	});
     </script>
 
 	<link rel="stylesheet" href="./css/swiper-bundle.min.css">
@@ -227,7 +227,7 @@
 
 
 
-	    <div class="section hero" id="section1">
+	    <section class="section hero" id="section1">
 	    	<video autoplay loop muted id="myVideo">
 				<source src="./img/main-bg.mp4" type="video/mp4">
 				<source src="./img/main-bg.webm" type="video/webm">
@@ -245,8 +245,8 @@
 				
 			</div>
 			
-	    </div>
-	    <div class="section about" id="section2">
+	    </section>
+	    <section class="section about" id="section2">
 	    	<div class="about__wrapper">
 
 				<img class="about__img" src="./img/about-bg.png" alt="">
@@ -301,25 +301,25 @@
 
 			</div>
 			
-	    </div>
-		<div class="section" id="section3">
+	    </section>
+		<section class="section" id="section3">
 	    	<div class="intro">
 	    		<h1>afterRender</h1>
 				<p>Don't forget to use afterRender callback for it!</p>
 	    	</div>
-	    </div>
-	    <div class="section" id="section4">
+	    </section>
+	    <section class="section" id="section4">
 	    	<div class="intro">
 	    		<h1>afterRender</h1>
 				<p>Don't forget to use afterRender callback for it!</p>
 	    	</div>
-	    </div>
-		<div class="section" id="section5">
+	    </section>
+		<section class="section" id="section5">
 	    	<div class="intro">
 	    		<h1>afterRender</h1>
 				<p>Don't forget to use afterRender callback for it!</p>
 	    	</div>
-	    </div>
+	    </section>
 	</div>
 
 	

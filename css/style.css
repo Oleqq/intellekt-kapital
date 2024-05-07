@@ -914,6 +914,23 @@ a {
   color: var(--white);
 }
 
+@media (max-width: 991px) {
+  section {
+    position: unset !important;
+    display: flex !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    padding: 120px 0 120px 0;
+    transform: none !important;
+  }
+}
+
+html, body {
+  height: auto;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+}
+
 .pp-viewing-page1 .menu-swiper {
   opacity: 0;
   transition: 0.7s ease;
@@ -1280,7 +1297,6 @@ a {
   }
 }
 .about__decoration {
-  height: 100%;
   width: 100%;
   top: 0;
   z-index: 1;
