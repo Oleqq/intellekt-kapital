@@ -52,41 +52,140 @@
 	<script src="./js/jquery.pagepiling.js"></script>
 	<!-- <script type="text/javascript" src="./js/jquery.pagepiling.min.js"></script> -->
 
-	
-	
-	
+
 	<script type="text/javascript">
-		document.addEventListener('DOMContentLoaded', function() {
-			// Проверяем ширину экрана
-			if (window.innerWidth > 991) {
-				// Если ширина экрана больше 991px, включаем pagepiling
-				$('#pagepiling').pagepiling({
-					menu: '#menu',
-					anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
-					sectionsColor: ['#145758', '#145758', '#2C3E50', '#51bec4'],
-					navigation: {
-						'position': 'right',
-						'tooltips': ['Главная', 'О КОМПАНИИ', 'ПРЕИМУЩЕСТВА', 'ПРОЕКТЫ', 'КОНТАКТЫ']
-					},
-					scrollingSpeed: 0, // Отключаем прокрутку между слайдами
-					afterRender: function(){
-						// Воспроизводим видео
-						$('video').get(0).play();
-					}
-				});
-			}
-			
-			// Кнопка открытия меню
-			$('.fullscreen-menu__button').click(function() {
-				$('#fullscreen-menu-section').toggleClass('open');
-			});
-	
-			// Кнопка закрытия меню
-			$('.fullscreen-menu__button-close').click(function() {
-				$('#fullscreen-menu-section').removeClass('open');
-			});
-		});
+		(function ($, document, window, undefined) {
+    'use strict';
+
+    // Объявление переменных и функций PagePiling
+    var DESTROYED = 'pp-destroyed';
+    var VIEWING_PREFIX = 'pp-viewing';
+    var $window = $(window);
+    var $document = $(document);
+    var $htmlBody = $('html, body');
+    var $body = $('body');
+    var TABLE_CELL_SEL = '.pp-tableCell';
+    var SLIDES_WRAPPER_SEL = '.pp-tableCell';
+
+    // Функция инициализации PagePiling
+    function initPagePiling() {
+        // Ваш код инициализации PagePiling здесь
+        $('#pagepiling').pagepiling({
+            menu: '#menu',
+            anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
+            sectionsColor: ['#145758', '#145758', '#2C3E50', '#51bec4'],
+            navigation: {
+                'position': 'right',
+                'tooltips': ['Главная', 'О КОМПАНИИ', 'ПРЕИМУЩЕСТВА', 'ПРОЕКТЫ', 'КОНТАКТЫ']
+            },
+            scrollingSpeed: 0, // Отключаем прокрутку между слайдами
+            afterRender: function(){
+                // Воспроизводим видео
+                $('video').get(0).play();
+            }
+        });
+    }
+
+    // Функция уничтожения PagePiling
+    function destroyPagePiling() {
+        // Удаляем обработчики событий, отключаем прокрутку, и т.д.
+        // Ваш код уничтожения PagePiling здесь
+
+		var DESTROYED =             'pp-destroyed';
+    var VIEWING_PREFIX =        'pp-viewing';
+    var $window = $(window);
+    var $document = $(document);
+    var $htmlBody = $('html, body');
+    var $body = $('body');
+    var TABLE_CELL_SEL = '.pp-tableCell';
+    var SLIDES_WRAPPER_SEL = '.pp-tableCell';
+
+
+
+    PP.destroy = function(all){
+
+        PP.setAllowScrolling(false);
+        PP.setKeyboardScrolling(false);
+        setURLHash('');
+        removeTouchHandler();
+
+        $window
+            .off('hashchange', hashChangeHandler)
+
+        $document
+            .off('click touchstart', '#pp-nav a')
+            .off('mouseenter', '#pp-nav li')
+            .off('mouseleave', '#pp-nav li')
+            .off('mouseover', options.normalScrollElements)
+            .off('mouseout', options.normalScrollElements);
+
+
+        if(all){
+            destroyStructure();
+        }
+    };
+
+    function destroyStructure(){
+
+        container.css({
+            'height': '',
+            'position': '',
+            '-ms-touch-action': '',
+            'touch-action': '',
+            'overflow': ''
+        });
+
+        $htmlBody.css({
+            'overflow': '',
+            'height': ''
+        });
+
+        // remove all of the .fp-viewing- classes
+        $.each($body.get(0).className.split(/\s+/), function (index, className) {
+            if (className.indexOf(VIEWING_PREFIX) === 0) {
+                $body.removeClass(className);
+            }
+        });
+
+        // Unwrapping content
+
+        container.find(TABLE_CELL_SEL  + ', ' + SLIDES_WRAPPER_SEL).each(function(){
+            //unwrap not being use in case there's no child element inside and its just text
+            $(this).replaceWith(this.childNodes);
+        });
+
+        //scrolling the page to the top with no animation
+        $htmlBody.scrollTop(0);
+
+        //removing selectors
+        $('.pp-section').each(function(){
+            $(this).removeAttr('style').removeAttr('data-anchor').removeClass('pp-section active pp-table');
+        })
+    }
+    }
+
+    // Проверка ширины экрана при загрузке страницы
+    $(document).ready(function () {
+        if (window.innerWidth > 991) {
+            initPagePiling(); // Инициализируем PagePiling
+        }
+    });
+
+    // Проверка ширины экрана при изменении размера окна
+    $(window).resize(function () {
+        if (window.innerWidth <= 991) {
+            destroyPagePiling(); // Уничтожаем PagePiling
+        } else {
+            initPagePiling(); // Инициализируем PagePiling
+        }
+    });
+
+})(jQuery, document, window);
+
 	</script>
+
+
+
 	
 
 	<link rel="stylesheet" href="./css/swiper-bundle.min.css">

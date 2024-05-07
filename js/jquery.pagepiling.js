@@ -9,6 +9,7 @@
 (function ($, document, window, undefined) {
     'use strict';
 
+    
     $.fn.pagepiling = function (custom) {
         var PP = $.fn.pagepiling;
         var container = $(this);
@@ -977,5 +978,7 @@
     };
 
 
+
+    
 })(jQuery, document, window);
 
