@@ -148,11 +148,36 @@
 h1 { 
     font-family:'NotoSerifDisplay_Condensed-Regular';
     font-weight: 400;
-    font-size: 96px;
+    font-size: clamp(3.2rem, 2rem + 2vw, 6rem);
     line-height: 100%;
     color: var(--white);
+
+    @media (max-width:567px) {
+        font-size: 42px;
+    }
+    @media (max-width:467px) {
+        font-size: 40px;
+    }
 
     b {
         font-family: 'NotoSerifDisplay_Condensed-Black';
     }
+}
+
+
+h4 {
+    font-family:'NotoSerifDisplay_Condensed-Regular';
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 150%;
+    color: var(--white);
+}
+
+
+p {
+    font-family: 'NotoSans-Medium';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--white);
 }
