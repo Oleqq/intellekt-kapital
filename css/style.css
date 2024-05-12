@@ -2147,12 +2147,13 @@ section {
   background-color: #145758;
   z-index: 2;
   position: absolute;
-  top: 240px;
+  top: 180px;
   left: 200px;
 }
 @media (max-width: 2230px) {
   .info__tabs {
     left: 70px;
+    top: 100px;
   }
 }
 @media (max-width: 1660px) {
