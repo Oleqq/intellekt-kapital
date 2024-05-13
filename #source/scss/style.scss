@@ -1656,6 +1656,24 @@ section.section.contacts {
 
 		z-index: -5;
 
+		&::before {
+			content: '';
+			position: absolute;
+			top: -10px;
+			height: 10px;
+			width: 300px;
+			background: var(--bg-light);
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 82px;
+			height: 82px;
+			background: var(--bg-light);
+		}
+
 		@media (max-width:2000px) {
 			right: -25vw;
 		}

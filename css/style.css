@@ -2453,6 +2453,23 @@ section {
   top: -5vw;
   z-index: -5;
 }
+.info__img::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  height: 10px;
+  width: 300px;
+  background: var(--bg-light);
+}
+.info__img::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 82px;
+  height: 82px;
+  background: var(--bg-light);
+}
 @media (max-width: 2000px) {
   .info__img {
     right: -25vw;
