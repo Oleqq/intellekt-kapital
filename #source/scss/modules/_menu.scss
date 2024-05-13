@@ -10,9 +10,12 @@
 
     padding: 40px 0 30px 30px;
 
+    top: 0;
+
     &-logo {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
         gap: 4px;
 
         font-family: 'NotoSans-Regular';
@@ -20,6 +23,18 @@
         font-size: 16px;
         line-height: 150%;
         color: var(--white);
+
+        @media (max-width:567px) {
+            font-size: 12px;
+            
+        }
+
+        svg {
+            @media (max-width:567px) {
+                width: 171px;
+                height: 40px;
+            }
+        }
     }
 
     .menu {
