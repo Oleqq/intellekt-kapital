@@ -614,6 +614,10 @@ section.section.info {
 					display: flex;
 				}
 
+				@media (max-width:467px) {
+					font-size: 12px;
+				}
+
 				&:hover {
 					transition: .2s ease;
 					
@@ -1002,6 +1006,33 @@ section.section.info {
 					color: #fff;
 					border-bottom: 3px solid #fff;
 				}
+			}
+		}
+	}
+
+
+
+	&__mobile {
+
+		@media (max-width:1440px) {
+			padding-top: 140px;
+		}
+
+		span {
+			font-family: var(--font-family);
+			font-weight: 700;
+			font-size: 14px;
+			line-height: 100%;
+			letter-spacing: 0.2em;
+			color: var(--logo-definitor);
+			text-align: left;
+
+			display: flex;
+
+			padding: 15px 30px;
+
+			@media (max-width:467px) {
+				padding: 15px 24px;
 			}
 		}
 	}
@@ -1494,7 +1525,7 @@ section.section.info {
 
 				padding: 50px;
 				background-color: #145758;
-				z-index: 5;		
+				
 
 				@media (max-width:1660px) {
 					padding: 35px;
@@ -1580,7 +1611,7 @@ section.section.info {
 		}
 
 		@media (max-width:567px) {
-			padding: 0 0 120px 0;
+			padding: 0 0 0 0;
 		}
 
 		ul {

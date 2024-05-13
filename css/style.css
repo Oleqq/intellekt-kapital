@@ -466,7 +466,7 @@ h5 {
 }
 
 p {
-  font-family: "NotoSans-Medium";
+  font-family: "NotoSans-Regular";
   font-weight: 400;
   font-size: 20px;
   line-height: 150%;
@@ -1526,6 +1526,11 @@ section {
     display: flex;
   }
 }
+@media (max-width: 467px) {
+  .about-text .text__decoration a {
+    font-size: 12px;
+  }
+}
 .about-text .text__decoration a:hover {
   transition: 0.2s ease;
 }
@@ -1865,6 +1870,27 @@ section {
   letter-spacing: 0.2em;
   color: #fff;
   border-bottom: 3px solid #fff;
+}
+@media (max-width: 1440px) {
+  .projects__mobile {
+    padding-top: 140px;
+  }
+}
+.projects__mobile span {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0.2em;
+  color: var(--logo-definitor);
+  text-align: left;
+  display: flex;
+  padding: 15px 30px;
+}
+@media (max-width: 467px) {
+  .projects__mobile span {
+    padding: 15px 24px;
+  }
 }
 
 .accordion__blocks {
@@ -2263,7 +2289,6 @@ section {
   text-align: left;
   padding: 50px;
   background-color: #145758;
-  z-index: 5;
 }
 @media (max-width: 1660px) {
   .info__blocks .block__body {
@@ -2337,7 +2362,7 @@ section {
 }
 @media (max-width: 567px) {
   .info__mobile {
-    padding: 0 0 120px 0;
+    padding: 0 0 0 0;
   }
 }
 .info__mobile ul {
