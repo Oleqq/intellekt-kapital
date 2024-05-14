@@ -19,21 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
     });
 
-    // Сначала проверяем ширину экрана при загрузке страницы
-    window.onload = function() {
-        if (window.innerWidth < 767) {
-        // Если ширина экрана меньше 767px, отключаем PagePiling
-        $('#pagepiling').pagepiling({
-            menu: null, // Заменяем меню
-            anchors: [], // Удаляем якоря
-            sectionsColor: [], // Удаляем цвета секций
-            navigation: false, // Отключаем навигацию
-            verticalCentered: false, // Отключаем вертикальное центрирование
-            scrollingSpeed: 0, // Останавливаем скорость прокрутки
-            
-        });
-        }
-    };
+    
   
 });
 
