@@ -73,6 +73,8 @@
 					}
 				});
 			}
+
+
 			
 			// Кнопка открытия меню
 			$('.fullscreen-menu__button').click(function() {
@@ -86,33 +88,7 @@
 		});
 	</script>
 
-	<script>
-	// Множитель для увеличения чувствительности
-	var sensitivity = 20;
 
-	// Функция для обработки события касания
-	function handleTouch(event) {
-	// Проверяем, сколько пальцев задействовано в касании
-	if (event.touches.length === 1) {
-		// Получаем текущую позицию касания
-		var touch = event.touches[0];
-		// Вычисляем изменение позиции по оси Y с учетом чувствительности
-		var deltaY = (touch.pageY - lastY) * sensitivity;
-		// Прокручиваем страницу на основе изменения позиции
-		window.scrollBy(0, -deltaY);
-		// Обновляем последнюю известную позицию касания
-		lastY = touch.pageY;
-	}
-	}
-
-	// Переменная для хранения последней известной позиции касания
-	var lastY = 0;
-
-	// Добавляем слушатель события touchmove для обработки касаний
-	document.addEventListener('touchmove', handleTouch, false);
-
-
-	</script>
 	
 
 	<link rel="stylesheet" href="./css/swiper-bundle.min.css">
