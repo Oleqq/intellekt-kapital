@@ -819,7 +819,6 @@ a {
 }
 
 .menu-cnt {
-  overflow: hidden;
   display: block;
   position: fixed;
   top: 25px;
@@ -864,6 +863,10 @@ a {
 
 .menu-cnt.active {
   opacity: 1;
+}
+
+.menu-cnt {
+  right: 100px;
 }
 
 .menu-cnt #menu {
