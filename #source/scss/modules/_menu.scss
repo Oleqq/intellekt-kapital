@@ -3,7 +3,7 @@
     width: 100%;
     height: auto;
     position: fixed;
-    z-index: 100;
+    z-index: 10;
 
     display: flex;
     justify-content: space-between;
@@ -137,7 +137,7 @@
     top: 25px;
     right: 25px;
     width: 450px;
-    z-index: 9999;
+   
     opacity: 0;
     transform: translate3d(0,-200px,0);
     transition: .7s cubic-bezier(.455,.03,.515,.955);
@@ -303,6 +303,18 @@
     }
     @media (max-width:567px) {
         font-size: 36px;
+    }
+
+    &.mobile {
+        display: none;
+        @media (max-width:1440px) {
+            display: flex;
+        }
+    }
+    &:not(.mobile) {
+        @media (max-width:1440px) {
+            display: none;
+        }
     }
 }
 

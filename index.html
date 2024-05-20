@@ -94,19 +94,24 @@
 					<ul class="main">
 						<li>
 							<a data-menuanchor="page2" href="#page2" class="fullscreen-menu__link"><span>О компании</span></a>
+							<a href="#section3" class="fullscreen-menu__link mobile"><span>О компании</span></a>
 						</li>
 	
 						<li>
 							<a data-menuanchor="page3" href="#page3" class="fullscreen-menu__link"><span>Преимущества</span></a>
+							<a href="#section3" class="fullscreen-menu__link mobile"><span>Преимущества</span></a>
 						</li>
 	
 						<li>
 							<a data-menuanchor="page4" href="#page4" class="fullscreen-menu__link"><span>Проекты</span></a>
+							<a href="#section4" class="fullscreen-menu__link mobile"><span>Проекты</span></a>
 						</li>
 	
 						<li>
 							<a data-menuanchor="page5" href="#page5" class="fullscreen-menu__link"><span>Контакты</span></a>
+							<a href="#section5" class="fullscreen-menu__link mobile"><span>Контакты</span></a>
 						</li>
+
 	
 	
 	
@@ -158,13 +163,13 @@
 			<div class="menu-cnt on active">
 				<div class="swiper-container swiper-container-horizontal menu-swiper">
 					<ul id="menu" class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
-						<li class="swiper-slide swiper-slide-prev">
+						<li class="swiper-slide swiper-slide-prev ">
 							<a href="#page1" data-index="1"><span>ГЛАВНАЯ</span></a>
 						</li>
-						<li class="swiper-slide swiper-slide-active" >
+						<li class="swiper-slide swiper-slide-active exclude" >
 							<a href="#page2" data-index="2">О КОМПАНИИ<i>//</i></a>
 						</li>
-						<li class="swiper-slide swiper-slide-next" >
+						<li class="swiper-slide swiper-slide-next exclude" >
 							<a href="#page3" data-index="3">ПРЕИМУЩЕСТВА<i>//</i></a>
 						</li>
 						<li class="swiper-slide exclude">
@@ -173,6 +178,8 @@
 						<li class="swiper-slide">
 							<a href="#page5" data-index="5">КОНТАКТЫ<i>//</i></a>
 						</li>
+
+						
 
 					</ul>
 					<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
@@ -184,7 +191,7 @@
 		</header>
 
 
-	    <section class="section hero" id="section1">
+	    <section class="section hero" id="section1 page1">
 			
 			<div class="header mobile">
 		
@@ -248,8 +255,8 @@
 				
 			</div>
 			
-	    </section>
-	    <section class="section about" id="section2">
+	    </section> 
+	    <section class="section about" id="section2 page2">
 			
 	    	<div class="about__wrapper">
 
@@ -258,7 +265,7 @@
 
 				<div class="about-text animate animate__animated animate__pulse animate__delay-2s animate__repeat-2">
 
-					<h4 class="animate animate__animated animate__fadeInDownBig animate__delay-1s">
+					<h4>
 						Управляющая компания<br>Интеллект Капитал
 					</h4>
 
@@ -359,7 +366,7 @@
 			</div>
 			
 	    </section>
-		<section class="section info" id="section3">
+		<section class="section info" id="section3 page3">
 			
 			<div class="info__wrapper">
 
@@ -637,7 +644,7 @@
 			</div>
 
 	    </section>
-	    <section class="section projects" id="section4">
+	    <section class="section projects" id="section4 page4">
 	    	<div class="projects__wrapper">
 
 				<img src="./img/projects-bg.png" alt="" class="projects__bg development">
@@ -1638,7 +1645,7 @@
 
 			</div>
 	    </section>
-		<section class="section contacts" id="section5">
+		<section class="section contacts" id="section5 page5">
 			<div class="contacts__wrapper desktop">
 
 				<img src="./img/contacts.png" alt="" class="contacts__bg">

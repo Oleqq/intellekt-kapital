@@ -293,3 +293,40 @@ document.addEventListener('DOMContentLoaded', function() {
       $('#fullscreen-menu-section').removeClass('open');
   });
 });
+
+
+
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     // Получаем ссылки на меню
+//     var links = document.querySelectorAll('.fullscreen-menu__link');
+
+//     // Функция для обновления значений атрибутов href
+//     function updateHrefs() {
+//         // Для каждой ссылки на меню
+//         links.forEach(function(link) {
+//             // Получаем атрибут data-href
+//             var desktopHref = link.getAttribute('data-href-desktop');
+//             var mobileHref = link.getAttribute('data-href-mobile');
+            
+//             // Получаем текущее разрешение экрана
+//             var screenWidth = window.innerWidth;
+            
+//             // Обновляем значение атрибута href в зависимости от разрешения экрана
+//             if (screenWidth < 1440 && mobileHref) {
+//                 link.setAttribute('href', mobileHref);
+//             } else {
+//                 link.setAttribute('href', desktopHref);
+//             }
+//         });
+//     }
+
+//     // Обновляем значения атрибутов href при загрузке страницы
+//     updateHrefs();
+
+//     // Обновляем значения атрибутов href при изменении размера окна
+//     window.addEventListener('resize', updateHrefs);
+// });
+
+
