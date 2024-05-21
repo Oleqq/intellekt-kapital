@@ -299,27 +299,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Функция для плавного скролла к элементу
-function scrollToElement(elementId) {
-  var element = document.getElementById(elementId);
-  if (element) {
-      window.scrollTo({
-          behavior: 'smooth',
-          top: element.offsetTop
-      });
-  } else {
-      console.error('Элемент с id ' + elementId + ' не найден.');
-  }
-}
-
-// Находим все элементы с href, содержащими id, и добавляем им обработчик события клика
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      var targetId = this.getAttribute('href').substring(1);
-      scrollToElement(targetId);
-  });
-});
-});
-
